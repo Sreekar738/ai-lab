@@ -1,0 +1,38 @@
+def vacuumcleaner(room_a, room_b):
+    position = "A"
+
+    while room_a == "dirty" or room_b == "dirty":
+
+        if position == "A":
+            print("\nVacuum cleaner is in Room A")
+
+            if room_a == "dirty":
+                print("Room A is dirty")
+                print("Action: Suck")
+                room_a = "clean"
+            else:
+                print("Room A is clean")
+                print("Action: Move Right")
+                position = "B"
+
+        else:
+            print("\nVacuum cleaner is in Room B")
+
+            if room_b == "dirty":
+                print("Room B is dirty")
+                print("Action: Suck")
+                room_b = "clean"
+            else:
+                print("Room B is clean")
+                print("Action: Move Left")
+                position = "A"
+
+    print("\nBoth rooms are clean")
+
+position=input("Enter position of vacuum cleaner:")
+
+room_a = input("Enter status of Room A (clean/dirty): ").lower()
+room_b = input("Enter status of Room B (clean/dirty): ").lower()
+
+
+vacuumcleaner(room_a, room_b)
